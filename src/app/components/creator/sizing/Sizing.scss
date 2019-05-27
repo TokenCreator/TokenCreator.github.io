@@ -1,0 +1,14 @@
+.sizing-form {
+  margin-bottom: 10px;
+  position: relative;
+
+  @media only screen and (max-width : $tablet) {
+    margin-bottom: 0;  
+  }
+
+  .input-wrap {
+    @media only screen and (max-width : $tablet) {
+      margin-bottom: 10px;
+    }
+  }
+}

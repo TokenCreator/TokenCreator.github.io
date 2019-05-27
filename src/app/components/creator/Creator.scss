@@ -1,0 +1,148 @@
+.creator {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  .creatorWrap {
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+  }
+
+  .creatorTitle {
+    img {
+      float: left;
+      height: 55px;
+      width: 55px;
+      margin-right: 10px;
+    }
+
+    p {
+      position: relative;
+      top: 4px;
+    }
+
+    h1 {
+      span {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .container {
+    vertical-align: top;
+    border: 3px solid $gray-lighten;
+  }
+
+  .previewWrap {
+    float: left;
+    overflow: auto;
+
+    @media only screen and (max-width : $tablet) {
+      float: none;
+      width: 100%;
+    }
+
+    &.showAll {
+      border: none;
+
+      .preview {
+        background: none !important;
+        transform: scale(3);
+        transform-origin: top left;
+      }
+    }
+
+    .preview {
+      background: rgba(0,0,0,0.75);
+      position: relative;
+    }
+  }
+
+  .controlsWrap {
+    float: right;
+    width: $controlsWidth;
+    border-left: none;
+    padding: 10px;
+    position: relative;
+
+    @media only screen and (max-width : $tablet) {
+      float: none;
+      width: 100%;
+      border-left: 3px solid $gray-lighten;
+      border-bottom: none;
+    }
+
+    &:before {
+      content: '';
+      width: 3px;
+      height: calc(100% + 6px);
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      background-color: $gray-lighten;
+
+      @media only screen and (max-width : $tablet) {
+        content: none;
+        display: none;
+      }
+    }
+
+    .input-wrap {
+      @media only screen and (max-width : $tablet) {
+        float: none;  
+      }
+    }
+  
+    .controls {
+      .btn {
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .supplies {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #565656;
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .footer {
+    padding: 10px;
+    float: right;
+    width: $controlsWidth;
+    text-align: center;
+
+    @media only screen and (max-width : $tablet) {
+      float: none;
+      width: 100%;
+    }
+
+    .disclaimer {
+      font-size: 0.8rem;
+    }
+  }
+}
